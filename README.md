@@ -14,3 +14,14 @@ in this competition. With scales set at 0.2, these augmentations introduce contr
 variations to the input images. They modify the image's intensity, color range, sharpness,
 tone, and vibrancy, enhancing the creation of diverse training data for improved model
 generalization and robustness.
+
+(2) Metadata insights
+
+Although the competition page mentions that the metadata are not used for
+deriving the pawpularity score, we discover some people using regression models with
+ensemble learning can get better prediction performance. So we calculate the
+correlation matrix between all the metadata attributes and the pawpularity score,
+representing it as the heatmap as shown in Figure 1. The correlation between the
+pawpularity score and all the metadata attributes is very low. It makes sense as
+mentioned previously. However, it may exist some nonlinear correlations, so we
+decided to use some kind of regression model to test the performance.
